@@ -102,12 +102,15 @@ plt.savefig("/Users/jackadeney/Documents/sharpeRatioWithBias/main_graph.jpeg")
 # 4. find Markowitz parameter lambda such that portfolio RFxP is maximal
 # 5. use this measure to compare portfolio manager
 
+w1 = [i/1000 for i in range(1, 1001)]
+w2 = [1-i for i in w1]
 
+n_weights = pd.DataFrame({'w1': w1, 'w2': w2})
+n_weights['rf_return'] = rf_value
+n_weights['p_return'] = max_sharpe_return
+n_weights['p_risk'] = max_sharpe_risk
 
+# formula for lambda 
 
-
-
-
-
-
+l = (max_sharpe_return - rf_value)/(val2*max_sharpe_risk)
 
