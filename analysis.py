@@ -91,10 +91,23 @@ plt.fill(points[hull.vertices,0], points[hull.vertices,1], 'orange', alpha=0.3)
 plt.plot(x1, y1, linestyle='--', color='grey')
 plt.plot(x2, y2, linestyle='--', color='grey')
 plt.plot(x3, y3, linestyle='--', color='grey')
+plt.xlabel(r"Risk $\sigma$")
+plt.ylabel(r"Return $E[R_p]$")
 
+plt.savefig("/Users/jackadeney/Documents/sharpeRatioWithBias/main_graph.jpeg")
 
 # 1. construct risk return convex hull of all possible portfolio allocations
 # 2. find sharpe ratio maximizing portfolio
 # 3. find portfolio RFxP line such that return == portfolio return
 # 4. find Markowitz parameter lambda such that portfolio RFxP is maximal
-# 5. use this measure to compare portfolio managers
+# 5. use this measure to compare portfolio manager
+
+
+
+
+
+
+
+
+
+
